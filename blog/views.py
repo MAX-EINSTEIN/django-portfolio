@@ -3,7 +3,7 @@ from .models import BlogPost, Tag
 from django.shortcuts import get_object_or_404
 
 
-def index(request):
+def blog_index(request):
     posts = BlogPost.objects.all()
     return render(request, 'blog/index.html', {'posts':posts})
 

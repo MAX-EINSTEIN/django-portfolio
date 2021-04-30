@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
-    'user',
     'blog',
 ]
 
@@ -73,7 +72,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_portfolio.wsgi.application'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -133,6 +131,6 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_URL = 'accounts/login'
-LOGIN_REDIRECT_URL = 'index'
-AUTH_USER_MODEL = 'user.User'
+LOGIN_URL = 'admin/login/'
+LOGIN_REDIRECT_URL = 'admin/'
+LOGOUT_REDIRECT_URL = 'index'

@@ -1,5 +1,5 @@
-from django.shortcuts import redirect
+from django.shortcuts import render
 
 # Create your views here.
-def redirect_root(request):
-    return redirect('index')
+def index(request):
+    return render(request, 'index.html')
