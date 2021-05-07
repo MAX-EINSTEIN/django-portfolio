@@ -1,10 +1,14 @@
 /* Background */
 
+html{
+  overflow-x: hidden;
+}
+
 body {
-  min-height: 100vh;
   background: linear-gradient(rgba(50,50,50,0.2), rgba(50,50,50,0.2)), url("../images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 
@@ -57,6 +61,7 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
 .navbar .navbar-brand {
   color: whitesmoke;
 }
@@ -100,13 +105,18 @@ body {
 .navbar-brand {
   padding-left: 30px;
   padding-right: 30px;
-  font: Bold 29px/41px Gotham;
+}
+
+.navbar-brand .brand-name{
+  font: Bold 36px Gotham;
   letter-spacing: 0;
   color: #ffffff;
   opacity: 1;
 }
 
-.my-picture{
+.navbar-brand .brand-logo{
+  width: 40px;
+  height: 40px;
   border-radius: 20px 20px !important;
   padding: 0px;
   margin: 4px;
@@ -118,19 +128,17 @@ body {
 .about-card {
   border-radius: 10px;
   box-shadow: 0 10px 30px 0 rgba(172, 168, 168, 0.43);
-  overflow: hidden;
-  height: 80vh;
+  height: fit-content;
   width: 100%;
   margin-top: -20px;
 }
 
 .about-card-img {
-  border-radius: 0;
-  position: absolute;
   width: 100%;
   height: 80vh;
   -o-object-fit: repeat;
   object-fit: repeat;
+  border-radius: 10px;
 }
 
 .about-card .card-body {
@@ -145,43 +153,26 @@ body {
 }
 
 
-/* Media queries */
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 73%;
-  }
-  .card-columns {
-    column-gap: 3rem;
-  }
-}
-
-@media (max-width: 422px) {
-  .about-card .card-body {
-    padding: 20px 8px;
-  }
-}
-
-
 /* Card for Posts */
 
 .box-shadow {
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
 }
 
-.card-title {
-  text-align: center;
-  font: 24px/34px Gotham;
-  letter-spacing: 0;
-  color: #454545;
-  opacity: 1;
-  margin-bottom: 0px;
-}
-
 .card-post{
   background: white;
   padding: 0;
   margin: 10px;
+  height: 420px;
+}
+
+.card-title {
+  text-align: center;
+  font: 20px/20px Gotham;
+  letter-spacing: 0;
+  color: #454545;
+  opacity: 1;
+  margin-bottom: 0px;
 }
 
 .card-post img{
@@ -189,8 +180,8 @@ body {
 }
 
 .card-text {
-  text-align: center;
-  font: 16px/22px Gotham;
+  text-align: left;
+  font: 16px/22px sans-serif;
   letter-spacing: 0;
   color: #454545;
   opacity: 1;
@@ -224,6 +215,7 @@ body {
   color: #434343;
   opacity: 1;
 }
+
 .card-author-link {
   text-align: left;
   font: 16px/26px Gotham;
@@ -309,4 +301,46 @@ footer p {
   background: white;
   padding: 8px;
   border-radius: 6px 6px;
+}
+
+
+/* Media queries */
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 73%;
+  }
+  .card-columns {
+    column-gap: 3rem;
+  }
+}
+
+@media (max-width: 768px){
+  .my-picture{
+    height: 28px;
+    width: 28px;
+    border-radius: 14px 14px !important;
+    margin: 2px;
+  }
+
+  .navbar-brand {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .navbar-brand .brand-name{
+    font: Bold 20px Arial;
+    letter-spacing: 0;
+    line-height: 2.4;
+    color: #ffffff;
+    opacity: 1;
+  }
+
+  .about-card-img {
+    width: 100%;
+    height: 50vh;
+    -o-object-fit: repeat;
+    object-fit: repeat;
+    border-radius: 10px;
+  }
 }
