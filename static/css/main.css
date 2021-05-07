@@ -1,11 +1,25 @@
+/* Background */
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(rgba(50,50,50,0.2), rgba(50,50,50,0.2)), url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
 .form-control[readonly] {
   background-color: white;
 }
+
+
+/* Fonts */
 
 @font-face {
   font-family: Gotham;
   src: url(../fonts/GothamMedium.ttf);
 }
+
 @font-face {
   font-family: Gotham;
   src: url(../fonts/GothamBold.ttf);
@@ -17,91 +31,26 @@
   src: url(../fonts/GothamBook.ttf);
 }
 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 73%;
-  }
-  .card-columns {
-    column-gap: 3rem;
-  }
+
+/* Colors */
+
+.color-dark{
+  background: #130202;
+  color: whitesmoke;
 }
 
-body {
-  min-height: 100vh;
-  background: linear-gradient(rgba(50,50,50,0.2), rgba(50,50,50,0.2)), url("../images/background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+.color-dark:hover{
+  background: #130202;
+  color: white;
 }
 
-
-
-.my-picture{
-  border-radius: 20px 20px !important;
-  padding: 0px;
-  margin: 4px;
+.btn-dark {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 
-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-footer p {
-  margin-bottom: 0.25rem;
-}
-
-.back-to-top{
-  background: white;
-  padding: 8px;
-  border-radius: 6px 6px;
-}
-
-.box-shadow {
-  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
-}
-
-.card-title {
-  /*height: 24px;*/
-  text-align: center;
-  font: 24px/34px Gotham;
-  letter-spacing: 0;
-  color: #454545;
-  opacity: 1;
-  margin-bottom: 0px;
-}
-
-.card-post{
-  background: white;
-  padding: 0;
-  margin: 10px;
-}
-
-.card-post img{
-  margin-top: -10px;
-}
-
-.card-text {
-  /*height: 76px;*/
-  text-align: center;
-  font: 16px/22px Gotham;
-  letter-spacing: 0;
-  color: #454545;
-  opacity: 1;
-}
-
-.card-subtext {
-  /*height: 12px;*/
-  text-align: center;
-}
-
-.card-subtext a {
-  font: 12px/26px Gotham;
-  text-transform: uppercase;
-  letter-spacing: 0;
-  color: #b5b5b5;
-  opacity: 1;
-}
+/* Navbar */
 
 .navbar {
   background-color: #130202!important;
@@ -157,6 +106,111 @@ footer p {
   opacity: 1;
 }
 
+.my-picture{
+  border-radius: 20px 20px !important;
+  padding: 0px;
+  margin: 4px;
+}
+
+
+/* About Card */
+
+.about-card {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px 0 rgba(172, 168, 168, 0.43);
+  overflow: hidden;
+  height: 80vh;
+  width: 100%;
+  margin-top: -20px;
+}
+
+.about-card-img {
+  border-radius: 0;
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+  -o-object-fit: repeat;
+  object-fit: repeat;
+}
+
+.about-card .card-body {
+  padding: 50px 20px 20px;
+}
+
+.about-card-description {
+  font-size: 20px;
+  color: #000;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+
+/* Media queries */
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 73%;
+  }
+  .card-columns {
+    column-gap: 3rem;
+  }
+}
+
+@media (max-width: 422px) {
+  .about-card .card-body {
+    padding: 20px 8px;
+  }
+}
+
+
+/* Card for Posts */
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+  text-align: center;
+  font: 24px/34px Gotham;
+  letter-spacing: 0;
+  color: #454545;
+  opacity: 1;
+  margin-bottom: 0px;
+}
+
+.card-post{
+  background: white;
+  padding: 0;
+  margin: 10px;
+}
+
+.card-post img{
+  margin-top: -10px;
+}
+
+.card-text {
+  text-align: center;
+  font: 16px/22px Gotham;
+  letter-spacing: 0;
+  color: #454545;
+  opacity: 1;
+}
+
+.card-subtext {
+  text-align: center;
+}
+
+.card-subtext a {
+  font: 12px/26px Gotham;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  color: #b5b5b5;
+  opacity: 1;
+}
+
+
+/* Post Details Page  */
+
 .author-image-thumb {
   background: transparent url("img/about the author.png") 0% 0% no-repeat
     padding-box;
@@ -197,6 +251,7 @@ footer p {
   color: #7e7e7e;
   opacity: 1;
 }
+
 .post-title {
   text-align: left;
   font: 38px/34px Gotham;
@@ -212,6 +267,9 @@ footer p {
   color: #434343;
   opacity: 1;
 }
+
+
+/* Tags  */
 
 .tags a {
   border: 1px solid #ddd;
@@ -229,56 +287,26 @@ footer p {
   margin: 0 3px 6px 0;
   padding: 5px 10px;
 }
+
 .tags a:hover {
   border-color: #08c;
 }
 
-.btn-dark {
-  margin-top: 20px;
-  margin-bottom: 20px;
+
+
+/* Footer  */
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-.color-dark{
-  background: #130202;
-  color: wheat;
+footer p {
+  margin-bottom: 0.25rem;
 }
 
-.color-dark:hover{
-  background: #130202;
-  color: white;
-}
-
-.about-card {
-  border-radius: 10px;
-  box-shadow: 0 10px 30px 0 rgba(172, 168, 168, 0.43);
-  overflow: hidden;
-  height: 80vh;
-  width: 100%;
-  margin-top: -20px;
-}
-
-.about-card-img {
-  border-radius: 0;
-  position: absolute;
-  width: 100%;
-  height: 80vh;
-  -o-object-fit: repeat;
-  object-fit: repeat;
-}
-
-.about-card .card-body {
-  padding: 50px 20px 20px;
-}
-
-@media (max-width: 422px) {
-  .about-card .card-body {
-    padding: 20px 8px;
-  }
-}
-
-.about-card-description {
-  font-size: 20px;
-  color: #000;
-  font-weight: normal;
-  margin-bottom: 20px;
+.back-to-top{
+  background: white;
+  padding: 8px;
+  border-radius: 6px 6px;
 }

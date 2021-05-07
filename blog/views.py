@@ -7,9 +7,11 @@ def blog_index(request):
     posts = BlogPost.objects.all()
     return render(request, 'blog/index.html', {'posts':posts})
 
+
 def post(request, id):
     post = get_object_or_404(BlogPost, pk=id)
     return render(request, 'blog/post.html', {'object': post})
+
 
 def tag_posts(request, name):
     name = name.lower()
