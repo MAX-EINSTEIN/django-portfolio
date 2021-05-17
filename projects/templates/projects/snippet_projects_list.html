@@ -1,0 +1,18 @@
+<div class="row">
+    {% for project in projects %}
+        <div class="post-wrapper col-sm-4 py-2">
+            <div class="card-post box-shadow">
+                <a href="#">
+                <img class="card-img-top" src="https://picsum.photos/id/{{post.id}}/500/350" alt="{{project.title}}"></a>
+                <div class="card-body">
+                    <a href="#">
+                        <div class="card-title">{{project.title|truncatewords:"3"}}</div>
+                    </a>
+                    <div class="card-text mt-4">
+                        {{project.description|truncatewords:"30"}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

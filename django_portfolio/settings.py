@@ -24,9 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-7_%cpe)@g!fl8y6=vgez5xdo*!9#ns96@rq@+^^vj7@ai59oz0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+DEBUG = False
+ 
 ALLOWED_HOSTS = []
+
+if not DEBUG:
+    ALLOWED_HOSTS = ['maxeinstein.pythonanywhere.com']
 
 
 # Application definition
@@ -40,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'blog',
+    'projects',
 ]
 
 MIDDLEWARE = [
